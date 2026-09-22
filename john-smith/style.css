@@ -76,7 +76,7 @@ section {
 }
 
 header img {
-  width: 100%;
+  max-width: 100%;
   border-radius: 1rem;
   object-fit: cover;
   object-position: center;
@@ -299,6 +299,10 @@ input#sidebar {
   /* Header */
   header {
     margin-top: 0;
+  }
+
+  header img {
+    width: 100%;
   }
 
   /* nav */
