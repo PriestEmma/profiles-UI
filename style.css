@@ -1,0 +1,323 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'poppins', sans-serif;
+  color: var(--text-color);
+  padding: 1rem;
+  background-color: var(--base-color);
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+  --base-color: #ffffff;
+  --text-color: #000;
+  --primary-color: #ffc06e;
+  --secondary-color: #8d8dff;
+  --color-1: #f9f6f3;
+  --color-2: #f3f7f9;
+  --color-3: #f6f3f9;
+}
+
+/* nav */
+nav {
+  margin: 1rem auto 3rem auto;
+  /* it means the navbar can grow up to 1000px but never go wider than screen size */
+  width: min(1000px, 100%);
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 2rem;
+}
+
+nav li:first-child {
+  margin-right: auto;
+  font-weight: bold;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+header,
+section {
+  margin: 1.5rem auto;
+  width: min(75rem, 100%);
+  background-color: var(--color-1);
+  padding: min(2rem, 15%);
+  border-radius: 1rem;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+header img {
+  max-width: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.text-container {
+  flex: 0 1 27rem;
+  /* flex-wrap: wrap; */
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    margin: 0.75rem 0 1.3rem 0;
+    font-size: 1.2rem;
+  }
+}
+
+.text-container a {
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: var(--base-color);
+  padding: 0.5rem;
+  margin-right: 0.3rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+
+.text-container a.secondary {
+  background-color: var(--secondary-color);
+}
+
+/* Section */
+section {
+  background-color: var(--color-2);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.text-container h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* Section-2 */
+section#my-work h2 {
+  margin: 1rem 0 2rem 0;
+}
+
+a.cta-button {
+  background-color: var(--primary-color);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 0.75rem;
+  color: var(--base-color);
+}
+
+.grid-container img {
+  width: 100%;
+  border-radius: 0.95rem;
+  transition: 0.2s ease;
+}
+
+.grid-container img:hover {
+  scale: 1.04;
+}
+
+.grid-container {
+  display: grid;
+
+  gap: 0.45rem;
+  margin: 0.5rem 0 2.5rem 0;
+  grid-template-areas:
+    'img-1 img-1 img-2 img-3'
+    'img-1 img-1 img-4 img-5';
+}
+
+/* Section-3 */
+section:nth-of-type(3) {
+  margin: 0.9rem auto;
+}
+
+section summary {
+  background-color: var(--base-color);
+  margin: 0.9rem;
+  padding: 0.2rem;
+  font-size: 1.3rem;
+}
+
+section details {
+  background-color: var(--base-color);
+  P {
+    padding: 0.5rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 0.3rem;
+  gap: 1.3rem;
+  a {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+}
+
+/* Hamburger Menu */
+
+.links-container {
+  display: none;
+}
+
+input#sidebar {
+  display: none;
+}
+
+.open-sidebar-btn,
+.close-sidebar-btn {
+  display: none;
+}
+
+/* Media Queries */
+@media (max-width: 910px) {
+  header {
+    text-align: center;
+  }
+
+  header .text-container {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 857px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+    grid-template-areas:
+      'img-1 img-2'
+      'img-3 img-3'
+      'img-4 img-5 ';
+  }
+}
+
+@media (max-width: 615px) {
+  /* Hamburger-Menu */
+  nav svg {
+    fill: var(--text-color);
+    cursor: pointer;
+    backdrop-filter: blur(20px);
+  }
+
+  nav .open-sidebar-btn {
+    display: flex;
+    justify-content: end;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    z-index: 3;
+  }
+
+  .close-sidebar-btn {
+    display: block;
+    margin-left: 70%;
+    padding: 15px 30px;
+  }
+
+  .close-sidebar-btn svg {
+    fill: white;
+  }
+
+  .links-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 5;
+    width: 300px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    transition: 1s ease-out;
+  }
+
+  .links-container a {
+    color: white;
+    width: 100%;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  #sidebar:checked ~ .links-container {
+    right: 0;
+  }
+
+  #sidebar:checked ~ #overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 4;
+  }
+
+  /* img */
+  .grid-container img {
+    width: 400px;
+    height: 350px;
+  }
+
+  /* Header */
+  header {
+    margin-top: 0;
+  }
+
+  /* nav */
+  nav li {
+    display: none;
+  }
+
+  .grid-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .cta-button {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (max-width: 488px) {
+  .text-container a {
+    display: block;
+    margin: 0.5rem;
+  }
+}
