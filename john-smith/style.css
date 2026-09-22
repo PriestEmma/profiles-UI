@@ -288,8 +288,7 @@ input#sidebar {
 
   /* img */
   .grid-container img {
-    width: 400px;
-    height: 350px;
+    width: 100%;
   }
 
   /* Header */
@@ -311,6 +310,10 @@ input#sidebar {
 
   .cta-button {
     display: block;
+    width: 100%;
+  }
+
+  .flex-container img {
     width: 100%;
   }
 }
