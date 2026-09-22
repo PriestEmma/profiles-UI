@@ -267,7 +267,7 @@ input#sidebar {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
-    transition: 1s ease-out;
+    transition: 0.2s ease-out;
   }
 
   .links-container a {
