@@ -316,6 +316,10 @@ input#sidebar {
   .flex-container img {
     width: 100%;
   }
+
+  section summary {
+    font-size: 1.1rem;
+  }
 }
 
 @media (max-width: 488px) {
