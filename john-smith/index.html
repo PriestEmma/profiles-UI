@@ -7,48 +7,48 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Header -->
-    <header>
-      <!-- Hamburger Menu  -->
-      <nav>
-        <input type="checkbox" id="sidebar" />
-        <label for="sidebar" class="open-sidebar-btn">
+    <!-- Hamburger Menu  -->
+    <nav class="hamburger-navbar">
+      <input type="checkbox" id="sidebar" />
+      <label for="sidebar" class="open-sidebar-btn">
+        <svg
+          xmlns="http://www.w3.org/200/svg"
+          height="32"
+          viewBox="0 -960 960 960"
+          width="32"
+        >
+          <path
+            d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+          />
+        </svg>
+      </label>
+
+      <label for="sidebar" id="overlay"></label>
+      <div class="links-container">
+        <label for="sidebar" class="close-sidebar-btn">
           <svg
-            xmlns="http://www.w3.org/200/svg"
+            xmlns="http://www.w3.org/2000/svg"
             height="32"
             viewBox="0 -960 960 960"
             width="32"
           >
             <path
-              d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
             />
           </svg>
         </label>
+        <a class="home-link" href="index.html">John Smith</a>
+        <a href="index.html">Instagram</a>
+        <a href="index.html">LinkedIn</a>
+        <a href="#my-work">My Work</a>
+        <a href="index.html">Contact</a>
+      </div>
+    </nav>
 
-        <label for="sidebar" id="overlay"></label>
-        <div class="links-container">
-          <label for="sidebar" class="close-sidebar-btn">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="32"
-              viewBox="0 -960 960 960"
-              width="32"
-            >
-              <path
-                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-              />
-            </svg>
-          </label>
-          <a class="home-link" href="index.html">John Smith</a>
-          <a href="index.html">Instagram</a>
-          <a href="index.html">LinkedIn</a>
-          <a href="#my-work">My Work</a>
-          <a href="index.html">Contact</a>
-        </div>
-      </nav>
-
+    <!-- Header -->
+    <header>
       <!-- Desktop Navigation -->
-      <nav>
+      <nav class="desktop-navbar">
         <ul>
           <li><a href="index.html">John Smith</a></li>
           <li><a href="index.html">Instagram</a></li>
@@ -60,6 +60,7 @@
 
       <div class="flex-container">
         <img
+          class="flex-img"
           height="400px"
           width="300px"
           src="./images/portrait.jpg"
@@ -73,7 +74,7 @@
             <strong>Instagram Creator</strong> with a passion for capturing
             moments that tell magical stories.
           </p>
-          <a href="" class="cta-button">Follow Me on Instagram</a>
+          <a href="#" class="cta-button">Follow Me on Instagram</a>
           <a href="#my-work" class="cta-button secondary">See my Work</a>
         </div>
       </div>
