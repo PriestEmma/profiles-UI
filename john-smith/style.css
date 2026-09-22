@@ -76,7 +76,7 @@ section {
 }
 
 header img {
-  max-width: 100%;
+  width: 100%;
   border-radius: 1rem;
   object-fit: cover;
   object-position: center;
@@ -317,24 +317,24 @@ input#sidebar {
     margin-top: 0.1rem;
   }
 
-  .hamburger-navbar {
-    /* display: none; */
-  }
-
   .cta-button {
     display: block;
+    width: 100%;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  section img {
     width: 100%;
   }
 
   section summary {
     font-size: 1.1rem;
   }
-}
 
-@media (max-width: 488px) {
-  .text-container .cta-button {
-    /* display: block; */
-    margin: 0.5rem;
-    width: 100%;
+  .text-container p {
+    font-size: 1.05rem;
   }
 }
