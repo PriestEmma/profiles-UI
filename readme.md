@@ -4,9 +4,9 @@ A collection of profile landing pages built with HTML and CSS while learning fro
 
 ## Projects
 
-| Project                   | About                                                                    | Tech        | Links                                                                        |
-| :------------------------ | :----------------------------------------------------------------------- | :---------- | :--------------------------------------------------------------------------- |
-| 👤 **John Smith Profile** | A simple personal profile landing page with layout, styling, and imagery | HTML5, CSS3 | [🌐 Live](https://profileui1.netlify.app/) · [📁 Code](./john-smith-profile) |
+| Project                   | About                                                                    | Tech        | Links                                                                |
+| :------------------------ | :----------------------------------------------------------------------- | :---------- | :------------------------------------------------------------------- |
+| 👤 **John Smith Profile** | A simple personal profile landing page with layout, styling, and imagery | HTML5, CSS3 | [🌐 Live](https://profileui1.netlify.app/) · [📁 Code](./john-smith) |
 
 > 🚧 More profile UIs coming soon.
 
